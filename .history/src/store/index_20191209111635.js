@@ -19,7 +19,7 @@ const store = new Vuex.Store({
     toggleSideBar ({commit}) {
       commit('TOGGLE_SIDEBAR')
     }
-  }
+  } 
 })
 
 export default store

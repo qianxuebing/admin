@@ -1,14 +1,13 @@
 <template>
-  <div>
-    Home
-  </div>
+  <div>Home</div>
 </template>
 
 <script>
+import SideBar from '../../components/SideBar'
 export default {
-  name: 'Home',
+  name: 'SideBar',
   components: {
-
+    SideBar
   }
 }
 </script>

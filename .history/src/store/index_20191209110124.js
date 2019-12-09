@@ -10,15 +10,11 @@ const store = new Vuex.Store({
   getters: {
 
   },
-  mutations: {
-    TOGGLE_SIDEBAR (state) {
-      state.isActive = !state.isActive
-    }
-  },
   actions: {
-    toggleSideBar ({commit}) {
-      commit('TOGGLE_SIDEBAR')
-    }
+
+  },
+  mutations: {
+
   }
 })
 
