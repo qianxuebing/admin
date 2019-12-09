@@ -28,7 +28,7 @@ export default {
     height: 100%;
   }
   .header{
-    background: rgb(82, 81, 81);
+    background: #333;
     color: #fff;
   }
 </style>

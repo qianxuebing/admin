@@ -11,8 +11,9 @@ export default new Router({
   routes: [
     {
       path: '/',
+      name: 'Layout',
       component: Layout,
-      children: [
+      children: [       
         {
           path: '/',
           name: 'Home',
@@ -24,6 +25,6 @@ export default new Router({
           component: HelloWorld
         }
       ]
-    }
+    },
   ]
 })

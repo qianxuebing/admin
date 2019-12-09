@@ -1,6 +1,6 @@
 <template>
   <div class="header-inner">
-    <i class="active-btn" :class="`${isActive ? 'el-icon-s-unfold' : 'el-icon-s-fold'}`" @click="toggleSideBar" size='lage'></i>
+    <i :class="`${isActive ? 'el-icon-s-unfold' : 'el-icon-s-fold'}`" @click="toggleSideBar"></i>
     <span>hello, Administrator</span>
   </div>
 </template>
@@ -20,13 +20,7 @@ export default {
 </script>
 
 <style>
-  .header-inner{
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .active-btn{
-    font-size: 25px;
-  }
+	.header-inner {
+		align-self: center;
+	}
 </style>

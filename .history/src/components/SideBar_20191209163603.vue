@@ -1,12 +1,10 @@
 <template>
 <div class="side-bar">
-  <div style="text-align: center">
-    <el-image
-      style="width: 30px; height: 30px"
-      :src="logo"
-      fit>
-    </el-image>
-  </div>
+  <el-image
+    style="width: 25px; height: 25px"
+    :src="logo"
+    fit>
+  </el-image>
   <el-menu router :default-active="$route.path" class="el-menu-vertical-demo menu" :collapse="isActive" background-color="#545c64" text-color="#fff"  acitve-background-color="#001528" active-text-color="#ffd04b">
     <template v-for="item in sideBarData">
       <el-menu-item :index="item.path" :key="item.id">
@@ -21,7 +19,7 @@
 <script>
 import { mapState } from 'vuex'
 import sideBarData from './mock.js'
-import logo from '@/assets/logo.png'
+import logo from '../../static/logo.png'
 export default {
   data () {
     return {
@@ -48,6 +46,7 @@ export default {
     background-color: #545c64;
   }
   .el-image{
+    /* width: 100%; */
     margin: 10px auto;
   }
 </style>

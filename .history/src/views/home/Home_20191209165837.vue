@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <el-image :src="imgUrl" fit class="welcome-img"></el-image>
-    <h1><i>Welcome to My Vue Project Demo!</i></h1>
+    <el-image :src="imgUrl" fit></el-image>
+    <h1>Welcome to My Project Demo!</h1>
   </div>
 </template>
 
@@ -16,7 +16,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   .home{
     text-align: center;
   }
@@ -28,7 +28,7 @@ export default {
     -webkit-text-fill-color:transparent;
     text-shadow: 3px 4px 5px rgba(132, 132, 247, 0.5);
   }
-  .welcome-img{
+  .el-image{
     width: 150px;
     height: 150px;
     margin-top: 45px;

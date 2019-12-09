@@ -2,11 +2,11 @@
   <el-container class="container">
       <side-bar></side-bar>
       <el-container>
-          <el-header class="header">
+          <el-header>
             <nav-bar></nav-bar>
           </el-header>
           <el-main>
-            <router-view></router-view>
+            <component :is="currentView"></component>
           </el-main>
       </el-container>
   </el-container>
@@ -15,20 +15,23 @@
 <script>
 import SideBar from '../../components/SideBar'
 import NavBar from '../../components/NavBar'
+import AppMain from '../../components/AppMain'
 export default {
+  data () {
+    return {
+      currentView: 'AppMain'
+    }
+  },
   components: {
     SideBar,
-    NavBar
+    NavBar,
+    AppMain
   }
 }
 </script>
 
 <style>
-  .container{
+  .container {
     height: 100%;
-  }
-  .header{
-    background: rgb(82, 81, 81);
-    color: #fff;
   }
 </style>

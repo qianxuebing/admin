@@ -21,7 +21,7 @@
 <script>
 import { mapState } from 'vuex'
 import sideBarData from './mock.js'
-import logo from '@/assets/logo.png'
+import logo from '../../static/logo.png'
 export default {
   data () {
     return {
@@ -48,6 +48,7 @@ export default {
     background-color: #545c64;
   }
   .el-image{
+    /* width: 100%; */
     margin: 10px auto;
   }
 </style>

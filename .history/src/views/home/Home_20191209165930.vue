@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <el-image :src="imgUrl" fit class="welcome-img"></el-image>
-    <h1><i>Welcome to My Vue Project Demo!</i></h1>
+    <h1>Welcome to My Project Demo!</h1>
   </div>
 </template>
 

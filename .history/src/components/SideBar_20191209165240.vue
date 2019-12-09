@@ -48,6 +48,7 @@ export default {
     background-color: #545c64;
   }
   .el-image{
+    /* width: 100%; */
     margin: 10px auto;
   }
 </style>

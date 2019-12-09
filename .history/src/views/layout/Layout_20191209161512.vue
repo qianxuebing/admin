@@ -2,7 +2,7 @@
   <el-container class="container">
       <side-bar></side-bar>
       <el-container>
-          <el-header class="header">
+          <el-header>
             <nav-bar></nav-bar>
           </el-header>
           <el-main>
@@ -24,11 +24,10 @@ export default {
 </script>
 
 <style>
+  .container >>> .el-header{
+    background-color: black;
+  }
   .container{
     height: 100%;
-  }
-  .header{
-    background: rgb(82, 81, 81);
-    color: #fff;
   }
 </style>
