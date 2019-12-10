@@ -26,7 +26,7 @@
       <el-table-column
         prop="tel"
         label="电话"
-        width="150">
+        width="130">
       </el-table-column>
       <el-table-column
         prop="address"
@@ -34,8 +34,7 @@
       </el-table-column>
        <el-table-column
         prop="operation"
-        label="操作"
-        width="200">
+        label="操作">
         <template slot-scope="scope">
           <el-button @click="handleEdit(scope.$index,scope.row)" type="primary" size="small">编辑</el-button>
           <el-button @click="handleDelete(scope.$index,scope.row)" type="danger" size="small">删除</el-button>

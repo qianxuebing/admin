@@ -16,17 +16,17 @@
       <el-table-column
         prop="date"
         label="日期"
-        width="130">
+        width="100">
       </el-table-column>
       <el-table-column
         prop="name"
         label="姓名"
-        width="120">
+        width="80">
       </el-table-column>
       <el-table-column
         prop="tel"
         label="电话"
-        width="150">
+        width="100">
       </el-table-column>
       <el-table-column
         prop="address"
@@ -34,8 +34,7 @@
       </el-table-column>
        <el-table-column
         prop="operation"
-        label="操作"
-        width="200">
+        label="操作">
         <template slot-scope="scope">
           <el-button @click="handleEdit(scope.$index,scope.row)" type="primary" size="small">编辑</el-button>
           <el-button @click="handleDelete(scope.$index,scope.row)" type="danger" size="small">删除</el-button>

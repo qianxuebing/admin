@@ -4,7 +4,7 @@
       <el-form-item label="姓名">
          <el-input v-model="formInline.name" placeholder="请输入姓名"></el-input>
       </el-form-item>
-      <el-form-item label="电话">
+      <el-form-item label="联系方式">
          <el-input v-model="formInline.telephone" placeholder="请输入联系方式"></el-input>
       </el-form-item>
       <el-form-item>
@@ -16,17 +16,17 @@
       <el-table-column
         prop="date"
         label="日期"
-        width="130">
+        width="100">
       </el-table-column>
       <el-table-column
         prop="name"
         label="姓名"
-        width="120">
+        width="80">
       </el-table-column>
       <el-table-column
         prop="tel"
         label="电话"
-        width="150">
+        width="100">
       </el-table-column>
       <el-table-column
         prop="address"
@@ -34,8 +34,7 @@
       </el-table-column>
        <el-table-column
         prop="operation"
-        label="操作"
-        width="200">
+        label="操作">
         <template slot-scope="scope">
           <el-button @click="handleEdit(scope.$index,scope.row)" type="primary" size="small">编辑</el-button>
           <el-button @click="handleDelete(scope.$index,scope.row)" type="danger" size="small">删除</el-button>
@@ -102,7 +101,6 @@ export default {
     onAdd () {
       this.title = '新增'
       this.dialogFormVisible = true
-      this.editForm = {}
     },
     handleEdit (index, row) {
       this.editIndex = index
