@@ -102,7 +102,7 @@ export default {
       this.editForm = Object.assign({}, row)
     },
     handleDelete (index, row) {
-      this.$confirm(`确定要删除"${row.name}"的相关信息吗？`, '提示', {
+      this.$confirm('确定要删除此条信息吗？', '提示', {
         confirmButtonText: '确定',
         cancelButtonText: '取消',
         type: 'warning'
@@ -116,7 +116,7 @@ export default {
         this.$message({
           type: 'info',
           message: '已取消删除'
-        })
+        })        
       })
     },
     onSave () {

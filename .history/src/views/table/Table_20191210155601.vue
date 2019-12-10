@@ -102,22 +102,7 @@ export default {
       this.editForm = Object.assign({}, row)
     },
     handleDelete (index, row) {
-      this.$confirm(`确定要删除"${row.name}"的相关信息吗？`, '提示', {
-        confirmButtonText: '确定',
-        cancelButtonText: '取消',
-        type: 'warning'
-      }).then(() => {
-        this.tableData.splice(index, 1)
-        this.$message({
-          type: 'success',
-          message: '删除成功!'
-        })
-      }).catch(() => {
-        this.$message({
-          type: 'info',
-          message: '已取消删除'
-        })
-      })
+      this.tableData.splice(index, 1)
     },
     onSave () {
       this.dialogFormVisible = false

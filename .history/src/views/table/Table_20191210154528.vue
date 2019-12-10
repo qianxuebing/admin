@@ -35,8 +35,8 @@
         prop="operation"
         label="操作">
         <template slot-scope="scope">
-          <el-button @click="handleEdit(scope.$index,scope.row)" type="primary" size="small">编辑</el-button>
-          <el-button @click="handleDelete(scope.$index,scope.row)" type="danger" size="small">删除</el-button>
+          <el-button @click="handleEdit(scope.row)" type="primary" size="small">编辑</el-button>
+          <el-button @click="handleDelete(scope.row)" type="danger" size="small">删除</el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -48,11 +48,11 @@
           <el-input v-model="editForm.name" autocomplete="off"></el-input>
         </el-form-item>
         <el-form-item label="电话">
-          <el-input v-model="editForm.tel" autocomplete="off"></el-input>
+          <el-input v-model="editForm.telephone" autocomplete="off"></el-input>
         </el-form-item>
          <el-form-item label="地址">
           <el-input v-model="editForm.address" autocomplete="off"></el-input>
-        </el-form-item>
+        </el-form-item>       
       </el-form>
       <div slot="footer" class="dialog-footer">
         <el-button @click="dialogFormVisible = false">取 消</el-button>
@@ -69,14 +69,13 @@ export default {
     return {
       tableData: tableData,
       dialogFormVisible: false,
-      editIndex: 0,
       formInline: {
         name: '',
         telephone: ''
       },
       editForm: {
         name: '',
-        tel: '',
+        telephone: '',
         address: ''
       }
     }
@@ -96,32 +95,14 @@ export default {
         })
       }
     },
-    handleEdit (index, row) {
-      this.editIndex = index
+    handleEdit (row) {
       this.dialogFormVisible = true
-      this.editForm = Object.assign({}, row)
     },
-    handleDelete (index, row) {
-      this.$confirm(`确定要删除"${row.name}"的相关信息吗？`, '提示', {
-        confirmButtonText: '确定',
-        cancelButtonText: '取消',
-        type: 'warning'
-      }).then(() => {
-        this.tableData.splice(index, 1)
-        this.$message({
-          type: 'success',
-          message: '删除成功!'
-        })
-      }).catch(() => {
-        this.$message({
-          type: 'info',
-          message: '已取消删除'
-        })
-      })
+    handleDelete (row) {
+
     },
     onSave () {
-      this.dialogFormVisible = false
-      this.tableData.splice(this.editIndex, 1, this.editForm)
+
     }
   }
 }

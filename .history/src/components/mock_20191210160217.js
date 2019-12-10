@@ -8,7 +8,7 @@ const sideBarData = [
     id: '02',
     path: '/layout/table',
     title: '设置',
-    icon: 'el-icon-s-tools'
+    icon: 'el-icon-menu'
   }
 ]
 
