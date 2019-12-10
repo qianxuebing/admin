@@ -18,16 +18,16 @@ const store = new Vuex.Store({
     TOGGLE_SIDEBAR (state) {
       state.isActive = !state.isActive
     },
-    LOGIN (state, loginForm) {
-      state.loginForm = loginForm
+    LOGIN (state, form) {
+      state.loginForm = form
     }
   },
   actions: {
     toggleSideBar ({commit}) {
       commit('TOGGLE_SIDEBAR')
     },
-    login (context, loginForm) {
-      context.commit('LOGIN', loginForm)
+    login ({commit}) {
+      commit('LOGIN')
     }
   }
 })

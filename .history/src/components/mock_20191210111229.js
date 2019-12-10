@@ -1,7 +1,7 @@
 const sideBarData = [
   {
     id: '01',
-    path: '/layout',
+    path: '/',
     title: '欢迎页',
     icon: 'el-icon-location'
   }, {

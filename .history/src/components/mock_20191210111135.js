@@ -1,12 +1,12 @@
 const sideBarData = [
   {
     id: '01',
-    path: '/layout',
+    path: '/Layout/',
     title: '欢迎页',
     icon: 'el-icon-location'
   }, {
     id: '02',
-    path: '/layout/helloWorld',
+    path: '/Layout/HelloWorld',
     title: '菜单',
     icon: 'el-icon-menu'
   }

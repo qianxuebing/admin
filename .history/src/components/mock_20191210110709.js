@@ -6,7 +6,7 @@ const sideBarData = [
     icon: 'el-icon-location'
   }, {
     id: '02',
-    path: '/layout/helloWorld',
+    path: '/HelloWorld',
     title: '菜单',
     icon: 'el-icon-menu'
   }
