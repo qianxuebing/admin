@@ -26,7 +26,6 @@ export default {
       this.$router.go(-1)
       this.loginForm.name = ''
       this.loginForm.pass = ''
-      this.$store.dispatch('login', this.loginForm)
     }
   }
 }

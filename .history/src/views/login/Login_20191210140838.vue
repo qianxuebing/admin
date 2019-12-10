@@ -60,8 +60,7 @@ export default {
     submitForm (formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          if (this.loginForm.name !== 'admin' || this.loginForm.pass !== 'admin123') {
-            console.log('11111111111')
+          if (this.loginForm.name !== 'admin' && this.loginForm.pass !== 'admin123') {
             this.$message({
               message: '账号或密码错误'
             })

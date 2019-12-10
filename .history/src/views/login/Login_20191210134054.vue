@@ -6,16 +6,12 @@
         :src="logo"
         fit>
       </el-image>
-      <el-form :model="loginForm" ref="loginForm" :rules="rules" :hide-required-asterisk=true>
-        <el-form-item label="" prop="name">
-          <el-input v-model="loginForm.name">
-            <el-button slot="prepend" icon="el-icon-s-custom"></el-button>
-          </el-input>
+      <el-form :model="loginForm" ref="loginForm" :rules="rules" label-width="80px" :hide-required-asterisk=true>
+        <el-form-item label="用户名" prop="name">
+          <el-input v-model="loginForm.name"></el-input>
         </el-form-item>
-        <el-form-item label="" prop="pass">
-          <el-input type="password" v-model="loginForm.pass" autocomplete="off">
-            <el-button slot="prepend" icon="el-icon-s-release"></el-button>
-          </el-input>
+        <el-form-item label="密码" prop="pass">
+          <el-input type="password" v-model="loginForm.pass" autocomplete="off"></el-input>
         </el-form-item>
         <el-form-item>
           <el-button type="primary" @click="submitForm('loginForm')">登录</el-button>
@@ -53,15 +49,11 @@ export default {
   computed: {
     ...mapState(['loginForm'])
   },
-  mounted () {
-    console.log('form', this.loginForm)
-  },
   methods: {
     submitForm (formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          if (this.loginForm.name !== 'admin' || this.loginForm.pass !== 'admin123') {
-            console.log('11111111111')
+          if (this.loginForm.name !== 'admin' && this.loginForm.pass !== 'admin123') {
             this.$message({
               message: '账号或密码错误'
             })
@@ -89,7 +81,7 @@ export default {
     align-items: center;
   }
   .login {
-    width: 300px;
+    width: 360px;
     text-align: center;
   }
   .login > .el-image {
@@ -100,9 +92,6 @@ export default {
   }
   .login button {
     width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    padding: 12px 0;
   }
   .login input {
     background-color: rgb(46, 46, 46)!important;

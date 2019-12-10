@@ -9,12 +9,12 @@
       <el-form :model="loginForm" ref="loginForm" :rules="rules" :hide-required-asterisk=true>
         <el-form-item label="" prop="name">
           <el-input v-model="loginForm.name">
-            <el-button slot="prepend" icon="el-icon-s-custom"></el-button>
+            <el-button slot="prepend" icon="el-icon-search"></el-button>
           </el-input>
         </el-form-item>
         <el-form-item label="" prop="pass">
           <el-input type="password" v-model="loginForm.pass" autocomplete="off">
-            <el-button slot="prepend" icon="el-icon-s-release"></el-button>
+            <el-button slot="prepend" icon="el-icon-search"></el-button>
           </el-input>
         </el-form-item>
         <el-form-item>
@@ -53,15 +53,11 @@ export default {
   computed: {
     ...mapState(['loginForm'])
   },
-  mounted () {
-    console.log('form', this.loginForm)
-  },
   methods: {
     submitForm (formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          if (this.loginForm.name !== 'admin' || this.loginForm.pass !== 'admin123') {
-            console.log('11111111111')
+          if (this.loginForm.name !== 'admin' && this.loginForm.pass !== 'admin123') {
             this.$message({
               message: '账号或密码错误'
             })
