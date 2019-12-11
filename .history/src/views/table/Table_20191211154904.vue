@@ -44,7 +44,7 @@
     </el-table>
 
     <!-- dialog -->
-    <el-dialog :title="title" :visible.sync="dialogFormVisible" width="40%">
+    <el-dialog :title="title" :visible.sync="dialogFormVisible" width="45%">
       <el-form :model="editForm" label-width="80px">
         <el-form-item label="姓名">
           <el-input v-model="editForm.name" autocomplete="off"></el-input>
