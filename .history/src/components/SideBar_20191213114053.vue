@@ -1,13 +1,13 @@
 <template>
 <div class="side-bar">
-  <div style="text-align: center; height: 60px;">
+  <div style="text-align: center">
     <el-image
       style="width: 30px; height: 30px"
       :src="logo"
       fit>
     </el-image>
   </div>
-  <el-menu router :default-active="$route.path" class="el-menu-vertical-demo menu" :collapse="isActive" background-color="#545c64" text-color="#fff" active-text-color="#fff">
+  <el-menu router :default-active="$route.path" class="el-menu-vertical-demo menu" :collapse="isActive" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
     <template v-for="item in sideBarData">
       <el-menu-item :index="item.path" :key="item.id">
         <i :class="item.icon"></i>
@@ -49,8 +49,5 @@ export default {
   }
   .el-image{
     margin: 10px auto;
-  }
-  .el-menu-item.is-active {
-   background-color: #409EFF !important;
   }
 </style>

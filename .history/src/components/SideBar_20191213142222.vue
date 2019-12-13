@@ -51,6 +51,6 @@ export default {
     margin: 10px auto;
   }
   .el-menu-item.is-active {
-   background-color: #409EFF !important;
+   background-color: rgb(82, 81, 81) !important;
   }
 </style>

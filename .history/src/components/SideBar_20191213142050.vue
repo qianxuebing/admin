@@ -7,7 +7,7 @@
       fit>
     </el-image>
   </div>
-  <el-menu router :default-active="$route.path" class="el-menu-vertical-demo menu" :collapse="isActive" background-color="#545c64" text-color="#fff" active-text-color="#fff">
+  <el-menu router :default-active="$route.path" class="el-menu-vertical-demo menu" :collapse="isActive" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
     <template v-for="item in sideBarData">
       <el-menu-item :index="item.path" :key="item.id">
         <i :class="item.icon"></i>
@@ -51,6 +51,6 @@ export default {
     margin: 10px auto;
   }
   .el-menu-item.is-active {
-   background-color: #409EFF !important;
+   background-color: rgb(0, 6, 14) !important;
   }
 </style>
