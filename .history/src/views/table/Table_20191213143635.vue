@@ -84,15 +84,11 @@ export default {
       }
     }
   },
-  computed: {
-    formatDate () {
-      let now = new Date()
-      let year = now.getFullYear()
-      let month = now.getMonth() + 1
-      let day = now.getDate()
-      month = month >= 10 ? month : '0' + month
-      day = day >= 10 ? day : '0' + day
-      return `${year}-${month}-${day}`
+  filters: {
+    formatDate (date) {
+      const now = new Date(date)
+
+
     }
   },
   methods: {
@@ -143,7 +139,7 @@ export default {
       this.dialogFormVisible = false
       if (this.title === '新增') {
         this.tableData.push({
-          date: this.formatDate,
+          date: new Date().toDateString(),
           name: this.editForm.name,
           tel: this.editForm.tel,
           address: this.editForm.address

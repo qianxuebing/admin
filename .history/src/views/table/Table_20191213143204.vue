@@ -84,17 +84,6 @@ export default {
       }
     }
   },
-  computed: {
-    formatDate () {
-      let now = new Date()
-      let year = now.getFullYear()
-      let month = now.getMonth() + 1
-      let day = now.getDate()
-      month = month >= 10 ? month : '0' + month
-      day = day >= 10 ? day : '0' + day
-      return `${year}-${month}-${day}`
-    }
-  },
   methods: {
     onSearch () {
       if (this.formInline.name === '' && this.formInline.telephone === '') {
@@ -141,9 +130,11 @@ export default {
     },
     onSave () {
       this.dialogFormVisible = false
+      const createTime = new Date().toLocaleDateString;
+      console.log('createTime', createTime)
       if (this.title === '新增') {
         this.tableData.push({
-          date: this.formatDate,
+          // date: new Date().toLocaleDateString,
           name: this.editForm.name,
           tel: this.editForm.tel,
           address: this.editForm.address
