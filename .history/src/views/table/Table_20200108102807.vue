@@ -189,7 +189,7 @@ export default {
     display: flex;
     margin-left: 10px;
   }
- .btn-group .el-form-item__content {
+  .el-form-item__content {
     display: flex!important;
   }
 </style>

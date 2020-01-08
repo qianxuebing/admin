@@ -7,7 +7,7 @@
       <el-form-item label="电话">
          <el-input v-model="formInline.telephone" placeholder="请输入联系方式"></el-input>
       </el-form-item>
-      <el-form-item class="btn-group">
+      <el-form-item>
         <el-button @click="onSearch">查询</el-button>
         <el-button type="primary" @click="onAdd">新增</el-button>
         <el-upload
@@ -22,7 +22,7 @@
           :file-list="fileList"
         >
           <el-button>点击上传</el-button>
-          <!-- <div slot="tip" class="el-upload_tip">只能上传jpg/png文件，且不超过500kb</div> -->
+          <div slot="tip" class="el-upload_tip">只能上传jpg/png文件，且不超过500kb</div>
         </el-upload>
       </el-form-item>
     </el-form>
@@ -186,10 +186,7 @@ export default {
 
 <style>
   .upload {
-    display: flex;
+    display: inline-block;
     margin-left: 10px;
-  }
- .btn-group .el-form-item__content {
-    display: flex!important;
   }
 </style>

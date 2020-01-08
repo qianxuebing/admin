@@ -7,7 +7,7 @@
       <el-form-item label="电话">
          <el-input v-model="formInline.telephone" placeholder="请输入联系方式"></el-input>
       </el-form-item>
-      <el-form-item class="btn-group">
+      <el-form-item>
         <el-button @click="onSearch">查询</el-button>
         <el-button type="primary" @click="onAdd">新增</el-button>
         <el-upload
@@ -188,8 +188,5 @@ export default {
   .upload {
     display: flex;
     margin-left: 10px;
-  }
- .btn-group .el-form-item__content {
-    display: flex!important;
   }
 </style>

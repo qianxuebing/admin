@@ -1,30 +1,22 @@
 <template>
   <div>
     <el-form :inline="true" :model="formInline">
-      <el-form-item label="姓名">
-         <el-input v-model="formInline.name" placeholder="请输入姓名"></el-input>
-      </el-form-item>
-      <el-form-item label="电话">
-         <el-input v-model="formInline.telephone" placeholder="请输入联系方式"></el-input>
-      </el-form-item>
-      <el-form-item class="btn-group">
-        <el-button @click="onSearch">查询</el-button>
-        <el-button type="primary" @click="onAdd">新增</el-button>
-        <el-upload
-          class="upload"
-          action="https://jsonplaceholder.typicode.com/posts/"
-          :on-preview="handlePreview"
-          :on-remove="handleRemove"
-          :before-remove="beforeRemove"
-          multiple
-          :limit="1"
-          :on-exceed="handleExceed"
-          :file-list="fileList"
-        >
-          <el-button>点击上传</el-button>
-          <!-- <div slot="tip" class="el-upload_tip">只能上传jpg/png文件，且不超过500kb</div> -->
-        </el-upload>
-      </el-form-item>
+      <el-row>
+        <el-form-item label="姓名">
+          <el-input v-model="formInline.name" placeholder="请输入姓名"></el-input>
+        </el-form-item>
+        <el-form-item label="电话">
+          <el-input v-model="formInline.telephone" placeholder="请输入联系方式"></el-input>
+        </el-form-item>
+        <el-form-item class="btn-group">
+          <el-button @click="onSearch">查询</el-button>
+          <el-button type="primary" @click="onAdd">新增</el-button>
+          <el-upload
+          >
+            <el-button>点击上传</el-button>
+          </el-upload>
+        </el-form-item>
+      </el-row>
     </el-form>
     <el-table :data="tableData" style="width: 100%" border>
       <el-table-column
@@ -85,7 +77,6 @@ export default {
     return {
       tableData: tableData,
       title: '',
-      fileList: [],
       dialogFormVisible: false,
       editIndex: 0,
       formInline: {
@@ -154,19 +145,6 @@ export default {
         })
       })
     },
-    handlePreview (file) {
-      console.log('handlePreview000000', file)
-    },
-    handleRemove (file, fileList) {
-      console.log('handleRemove11111111111', file)
-      console.log('handleRemove11111111111', fileList)
-    },
-    beforeRemove (file, fileList) {
-      return this.$confirm(`确定移除${file.name}?`)
-    },
-    handleExceed (files, fileList) {
-      this.$message.warning(`当前限制选择1个文件，本次选择了${files.length}个文件，共选择了${files.length + fileList.length}个文件`)
-    },
     onSave () {
       this.dialogFormVisible = false
       if (this.title === '新增') {
@@ -185,11 +163,7 @@ export default {
 </script>
 
 <style>
-  .upload {
-    display: flex;
-    margin-left: 10px;
-  }
- .btn-group .el-form-item__content {
+  .btn-group {
     display: flex!important;
   }
 </style>
