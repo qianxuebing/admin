@@ -56,18 +56,14 @@
         </template>
       </el-table-column>
     </el-table>
-    <el-pagination
-      style="margin-top: 10px; text-align: right"
+     <el-pagination
       @size-change="handleSizeChange"
       @current-change="handleCurrentChange"
-      :current-page="currentPage"
-      :page-sizes="[10, 20, 30]"
+      :page-sizes="[10, 15, 20]"
       :page-size="pageSize"
-      background
-      layout="prev, pager, next"
+      layout="total, sizes, prev, pager, next, jumper"
       :total="total">
     </el-pagination>
-
     <!-- dialog -->
     <el-dialog :title="title" :visible.sync="dialogFormVisible" width="40%">
       <el-form :model="editForm" label-width="80px">
@@ -99,9 +95,9 @@ export default {
       fileList: [],
       dialogFormVisible: false,
       editIndex: 0,
-      pageSize: 1,
+      pageSize: 0,
       currentPage: 1,
-      total: 1,
+      total: 0,
       formInline: {
         name: '',
         telephone: ''
@@ -195,12 +191,9 @@ export default {
       }
     },
     handleSizeChange (val) {
-      console.log(`每页${val}条`)
       this.pageSize = val
     },
     handleCurrentChange (val) {
-      console.log(`当前页：${val}`)
-
       this.currentPage = val
     }
   }

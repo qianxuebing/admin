@@ -61,7 +61,6 @@
       @size-change="handleSizeChange"
       @current-change="handleCurrentChange"
       :current-page="currentPage"
-      :page-sizes="[10, 20, 30]"
       :page-size="pageSize"
       background
       layout="prev, pager, next"
@@ -99,7 +98,7 @@ export default {
       fileList: [],
       dialogFormVisible: false,
       editIndex: 0,
-      pageSize: 1,
+      pageSize: 0,
       currentPage: 1,
       total: 1,
       formInline: {
